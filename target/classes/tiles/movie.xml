@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+   <definition name="baseLayout"  template="/WEB-INF/views/layout.jsp">
+      <put-attribute name="top" value="/WEB-INF/views/top.jsp" />
+      <put-attribute name="body" value="" />
+      <put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+   </definition>
+
+   <definition name="main" extends="baseLayout">
+      <put-attribute name="body" value="/WEB-INF/views/main.jsp" />
+   </definition>
+	
+	<definition name="loginform" extends="baseLayout">
+      <put-attribute name="body" value="/WEB-INF/views/loginform.jsp" />
+   </definition>
+   
+   <definition name="loginsave" extends="baseLayout">
+      <put-attribute name="body" value="/WEB-INF/views/loginsave.jsp" />
+   </definition>
+   
+   <definition name="memberout" extends="baseLayout">
+      <put-attribute name="body" value="/WEB-INF/views/memberout.jsp" />
+   </definition>
+   
+   <definition name="ticketing" extends="baseLayout">
+      <put-attribute name="body" value="/WEB-INF/views/ticketing.jsp" />
+   </definition>
+
+	
+	<!-- 로그인페이지 별도 -->
+	<definition name="loginLayout"  template="/WEB-INF/views/loginLayout.jsp">
+      <put-attribute name="logintop" value="/WEB-INF/views/logintop.jsp" />
+      <put-attribute name="loginbody" value="" />
+      <put-attribute name="loginfooter" value="/WEB-INF/views/loginfooter.jsp" />
+   </definition>
+   
+   <definition name="loginbody" extends="loginLayout">
+      <put-attribute name="loginbody" value="/WEB-INF/views/loginbody.jsp" />
+   </definition>
+   
+ </tiles-definitions>
